@@ -1,5 +1,3 @@
-Berikut README yang **mirip gaya dan formatnya**, tetapi untuk proyek **CesiumGIS** Anda:
-
 ---
 
 # Proyek CesiumGIS — Visualisasi Peta 3D dengan CesiumJS
