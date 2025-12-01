@@ -3,70 +3,72 @@ body {
   margin: 0;
   font-family: "Share Tech Mono", "Courier New", monospace;
   background: #000;
-  color: #19ff47;
-  text-shadow: 0 0 6px rgba(25,255,71,0.8);
+  color: #00ffcc;
+  text-shadow: 0 0 6px rgba(0,255,204,0.7);
   overflow: hidden;
 }
 
-/* CRT Scanlines + Subtle Flicker */
+/* CRT Scanlines + Flicker */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
+  
   background: repeating-linear-gradient(
-    rgba(0,255,0,0.04) 0px,
-    rgba(0,255,0,0.04) 2px,
+    rgba(0,255,204,0.05) 0px,
+    rgba(0,255,204,0.05) 2px,
     transparent 3px
   );
+
   animation: crt-shimmer 3s infinite linear;
-  opacity: 0.5;
+  opacity: 0.55;
 }
 
 @keyframes crt-shimmer {
-  0% { opacity: 0.3; }
-  50% { opacity: 0.6; }
-  100% { opacity: 0.3; }
+  0% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+  100% { opacity: 0.4; }
 }
 
-/* HEADER: POLICE DISPATCH ID */
+/* HEADER */
 header {
-  background: #001900;
+  background: #001515;
   padding: 10px 20px;
   font-size: 14px;
   font-weight: bold;
-  border-bottom: 2px solid #19ff47;
+  border-bottom: 2px solid #00ffcc;
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
 }
 
-/* MAP UI */
+/* MAP SECTION */
 #map {
   position: absolute;
   top: 42px;
   bottom: 26px;
   width: 100%;
-  background: #010f00;
-  border-top: 2px solid #19ff47;
-  border-bottom: 2px solid #19ff47;
+  background: #000d0d;
+  border-top: 2px solid #00ffcc;
+  border-bottom: 2px solid #00ffcc;
 }
 
-/* TERMINAL COMMAND BAR */
+/* TERMINAL BAR */
 #terminal-bar {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: #001900;
+  background: #001515;
   padding: 6px 12px;
   font-size: 14px;
-  border-top: 2px solid #19ff47;
+  border-top: 2px solid #00ffcc;
 }
 
 .cursor {
   display: inline-block;
   width: 10px;
-  background: #19ff47;
+  background: #00ffcc;
   animation: blink 0.8s steps(1) infinite;
 }
 
@@ -81,15 +83,15 @@ header {
   display: none !important;
 }
 
-/* Info Box Fallout UI */
+/* Info Box (Mint Retro) */
 .cesium-infoBox {
   background: #000 !important;
-  border: 2px solid #19ff47 !important;
+  border: 2px solid #00ffcc !important;
 }
 
 .cesium-infoBox-description {
-  background: #001300 !important;
-  color: #19ff47 !important;
-  border: 1px solid #19ff47 !important;
+  background: #001212 !important;
+  color: #00ffcc !important;
+  border: 1px solid #00ffcc !important;
   text-shadow: none !important;
 }
