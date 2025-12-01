@@ -1,3 +1,5 @@
+
+
 ---
 
 # Proyek CesiumGIS — Visualisasi Peta 3D dengan CesiumJS
@@ -34,12 +36,12 @@ Proyek dapat dilihat secara online di:
 
 1. Clone repository:
 
-   ```
+   ```bash
    git clone https://github.com/hoothuts/CesiumGIS.git
    ```
 2. Masuk ke folder proyek:
 
-   ```
+   ```bash
    cd CesiumGIS
    ```
 3. Buka **index.html** melalui browser (bisa langsung atau menggunakan Live Server).
