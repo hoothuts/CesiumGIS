@@ -1,0 +1,95 @@
+/* GLOBAL THEME */
+body {
+  margin: 0;
+  font-family: "Share Tech Mono", "Courier New", monospace;
+  background: #000;
+  color: #19ff47;
+  text-shadow: 0 0 6px rgba(25,255,71,0.8);
+  overflow: hidden;
+}
+
+/* CRT Scanlines + Subtle Flicker */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    rgba(0,255,0,0.04) 0px,
+    rgba(0,255,0,0.04) 2px,
+    transparent 3px
+  );
+  animation: crt-shimmer 3s infinite linear;
+  opacity: 0.5;
+}
+
+@keyframes crt-shimmer {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+  100% { opacity: 0.3; }
+}
+
+/* HEADER: POLICE DISPATCH ID */
+header {
+  background: #001900;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-bottom: 2px solid #19ff47;
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+/* MAP UI */
+#map {
+  position: absolute;
+  top: 42px;
+  bottom: 26px;
+  width: 100%;
+  background: #010f00;
+  border-top: 2px solid #19ff47;
+  border-bottom: 2px solid #19ff47;
+}
+
+/* TERMINAL COMMAND BAR */
+#terminal-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #001900;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-top: 2px solid #19ff47;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  background: #19ff47;
+  animation: blink 0.8s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* CESIUM UI CLEANUP */
+.cesium-viewer-toolbar,
+.cesium-viewer-animationContainer,
+.cesium-viewer-timelineContainer {
+  display: none !important;
+}
+
+/* Info Box Fallout UI */
+.cesium-infoBox {
+  background: #000 !important;
+  border: 2px solid #19ff47 !important;
+}
+
+.cesium-infoBox-description {
+  background: #001300 !important;
+  color: #19ff47 !important;
+  border: 1px solid #19ff47 !important;
+  text-shadow: none !important;
+}
